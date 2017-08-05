@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Task List Manager</title>
+    <title>To Do List</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
     <header>
-        <h1>Task List Manager</h1>
+        <h1>To Do List</h1>
     </header>
 
     <main>
@@ -48,31 +48,28 @@
         <br>
 
         <!-- part 4: the modify/promote/delete form -->
-        <?php if (count($task_list) > 0 && empty($task_to_modify)) : ?>
-        <h2>Select Task:</h2>
-        <form action="." method="post" >
-            <?php foreach( $task_list as $task ) : ?>
-              <input type="hidden" name="tasklist[]" value="<?php echo $task; ?>">
-            <?php endforeach; ?>
-            <label>Task:</label>
-            <select name="taskid">
-                <?php foreach( $task_list as $id => $task ) : ?>
-                    <option value="<?php echo $id; ?>">
-                        <?php echo $task; ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
-            <br>
-            <label>&nbsp;</label>
-            <input type="submit" name="action" value="Modify Task">
-            <input type="submit" name="action" value="Promote Task">
-            <input type="submit" name="action" value="Delete Task">
-
-            <br>
-            <label>&nbsp;</label>
-            <input type="submit" name="action" value="Sort Tasks">
-        </form>
-        <?php endif; ?>
+       <?php if (count($task_list) > 0 && empty($task_to_modify)) : ?>
+       <h2>Select Task:</h2>
+       <form action="." method="post" >
+       		<?php foreach( $task_list as $task) : ?>
+			<input type="hidden" name="tasklist[]"
+				value="<?php echo $task; ?>">
+			<?php endforeach; ?>
+			<label>Task:</label>
+			<select name="taskid">
+				<?php foreach( $task_list as $id => $task ) : ?>
+					<option value ="<?php echo $id; ?>">
+						<?php echo $task; ?>
+					</option>
+				<?php endforeach; ?>
+			</select>
+			<br>
+			<label>&nbsp;</label>
+			<input type="submit" name="action" value="Modify Task">
+			<input type="submit" name="action" value="Delete Task">
+			<br>
+		</form>
+	<?php endif; ?>
 
         <!-- part 5: the modify save/cancel form -->
         <?php if (!empty($task_to_modify)) : ?>
