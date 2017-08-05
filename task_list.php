@@ -79,7 +79,7 @@
 			<input type="hidden" name="tasklist[]" value"<?php echo $task; ?>">
 		<?php endforeach; ?>
 		<label>Task:</label>
-		<input type="hidden" name="modifiedtaskid" value="<?php echo $task: ?>">
+		<input type="hidden" name="modifiedtaskid" value="<?php echo $task_index; ?>">
 		<input type="text" name="modifiedtask" value="<?php echo $task_to_modify; ?>"><br>
 		<label>&nbsp;</label>
 		<input type="submit" name="action" value="Save Changes">
