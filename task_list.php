@@ -74,17 +74,13 @@
         <!-- part 5: the modify save/cancel form -->
         <?php if (!empty($task_to_modify)) : ?>
 	<h2>Task to Modify:</h2>
-	<form action="." method="post">
+	<form action="." method="post" >
 		<?php foreach( $task_list as $task ) : ?>
-			<input type="hidden" name="tasklist[]" value+"<?php echo $task; ?>">
+			<input type="hidden" name="tasklist[]" value"<?php echo $task; ?>">
 		<?php endforeach; ?>
 		<label>Task:</label>
-			<input type="hidden" name="modifiedtaskid" value="<?php echo $task: ?>">
-		<?php endforeach; ?>
-		<label>Task:</label>
-		<input type="hidden" name="modifiedtaskid" value="<?php echo $task_index; ?>">
-		<input type="text" name="modifiedtask" value="<?php echo $task_to_modify;
-		?>"><br>
+		<input type="hidden" name="modifiedtaskid" value="<?php echo $task: ?>">
+		<input type="text" name="modifiedtask" value="<?php echo $task_to_modify; ?>"><br>
 		<label>&nbsp;</label>
 		<input type="submit" name="action" value="Save Changes">
 		<input type="submit" name="action" value="Cancel Changes">
