@@ -51,7 +51,7 @@
        <?php if (count($task_list) > 0 && empty($task_to_modify)) : ?>
        <h2>Select Task:</h2>
        <form action="." method="post" >
-       		<?php foreach( $task_list as $task) : ?>
+       		<?php foreach( $task_list as $task ) : ?>
 			<input type="hidden" name="tasklist[]"
 				value="<?php echo $task; ?>">
 			<?php endforeach; ?>
