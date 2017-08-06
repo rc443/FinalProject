@@ -13,17 +13,8 @@
         <?php endforeach; ?>
         </select>
         <br>
-
-        <label>Code:</label>
-        <input type="text" name="code">
-        <br>
-
-        <label>Name:</label>
+        <label>Item:</label>
         <input type="text" name="name">
-        <br>
-
-        <label>List Price:</label>
-        <input type="text" name="price">
         <br>
 
         <label>&nbsp;</label>
