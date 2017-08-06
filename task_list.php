@@ -35,17 +35,19 @@
         <br>
 
         <!-- part 3: the add form -->
-        <h2>Add Task:</h2>
-        <form action="." method="post" >
-            <?php foreach( $task_list as $task ) : ?>
-              <input type="hidden" name="tasklist[]" value="<?php echo $task; ?>">
-            <?php endforeach; ?>
-            <label>Task:</label>
-            <input type="text" name="newtask" id="newtask"> <br>
-            <label>&nbsp;</label>
-            <input type="submit" name="action" value="Add Task">
-        </form>
-        <br>
+	<h2>Add Task:</h2>
+	<form action="." method="post" >
+		<?php foreach( $task_list as $task) : ?>
+			<input type="hidden" name="tasklist[]"
+				value="<?php echo $task; ?>">
+			<?php endforeach; ?>
+			<label>Task:</label>
+			<input type="text" name="newtask" id="newtask">
+		<br>
+			<label>&nbsp;</label>
+			<input type="submit" name="action" value="Add Task">
+		</form>
+		<br>
 
         <!-- part 4: the modify/promote/delete form -->
        <?php if (count($task_list) > 0 && empty($task_to_modify)) : ?>
