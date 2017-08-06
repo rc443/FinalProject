@@ -32,6 +32,15 @@
                 <td><?php echo $product->getName(); ?></td>
                 <td class="right"><?php echo $product->getPrice(); ?>
                 </td>
+		<td><form action="." method="post"
+			id="delete_product_from">
+		<input type="hidden" name="action"
+			value="delete_product">
+		<input type="hidden" name="product_id"
+			value="<?php echo $product->getID(); ?>">
+		<Input type="hidden" name="category_id"
+			value="<?php echo $current_category->getID(); ?>">
+		<input type="submit" value="Delete">
                 </form></td>
             </tr>
             <?php endforeach; ?>
