@@ -3,10 +3,10 @@
     <h1>Menu</h1>
     <ul>
         <li>
-            <a href="to_do_list">To Do List</a>
+            <a href="product_manager">Product Manager</a>
         </li>
         <li>
-            <a href="previous_to_do_lists/product_manager">List of Previous To Do Lists</a>
+            <a href="product_catalog">Product Catalog</a>
         </li>
     </ul>
 </main>
